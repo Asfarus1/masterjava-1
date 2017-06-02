@@ -124,7 +124,7 @@ MatrixBenchmark.concurrentMultiply3           1000    ss  100  186,827 ± 11,882
 
 ## Занятие 3
 - Разбор ДЗ (работа с XML)
-- Обзор <a href="https://github.com/amaembo/streamex">StreamEx</a> (от Тагира Валеева)
+- [Обзор Guava](https://drive.google.com/open?id=0B9Ye2auQ_NsFeFB5a29JQ2tRNHM)
 - Монады. flatMap
 - SOA и Микросервисы
 - Многомодульный Maven проект
@@ -133,12 +133,14 @@ MatrixBenchmark.concurrentMultiply3           1000    ss  100  186,827 ± 11,882
 - Разбор ДЗ (реализация структуры проекта, загрузка и разбор xml)
 - Thymleaf
 - Maven. Поиск и разрешение конфликтов зависимостей
-- Логирование
-- Выбор lightweight JDBC helper library. <a href="http://jdbi.org/">JDBI</a>
-- Tomcat Class Loader. Memory Leaks
+- Подключаем логирование с общими настройкам
+- Библиотеки и фреймворки для работы с JDBC.
+- Модуль persist
 
 ## Занятие 5
-- Разбор ДЗ (реализуем модули persist, export и web)
+- Разбор ДЗ 
+  - Сохранение в базу в batch-моде с обработкой конфликтов
+  - Вставка в несколько потоков
 - Конфигурирование приложения (<a href="https://github.com/typesafehub/config">Typesafe config</a>)
 - Lombook
 
@@ -150,33 +152,53 @@ MatrixBenchmark.concurrentMultiply3           1000    ss  100  186,827 ± 11,882
   - Имплементируем Mail Service
   
 ## Занятие 7
-- Разбор ДЗ (реализация MailSender, сохранение результатов отправки)
+- Разбор ДЗ 
+  - реализация MailSender
+  - сохранение результатов отправки в DB
+  - импорт Проектов и Групп 
 - Стили WSDL. Кастомизация WSDL
 - Публикация кастомизированного WSDL. Автогенерация.
 - Деплой в Tomcat
 - Создание клиента почтового сервиса
+- Реализация массовой и групповой отправки почты. HW7
 
 ## Занятие 8
-- Разбор ДЗ (отправка почты через Executor из модуля web)
+- Разбор ДЗ
+   - Делаем общий mailService.wsdl
+   - Обновление WSDL
+   - Отправка почты из модуля webapp
 - Доступ к переменным maven в приложении
 - SOAP Exception. Выделение общей части схемы
-- Передача двоичных данных в веб-сервисах. MTOM
+- Коррекция схемы
 
 ## Занятие 9
-- Разбор ДЗ (реализация загрузки и отправки вложений по почте)
-- JAX-WS Message Context
+- Добавление мавен плагинов (copy-rename-maven-plugin, maven-antrun-plugin, liquibase-maven-plugin)
+- Разбор ДЗ
+  - Реализация вложений в веб-сервисе
+  - Подключение MTOM
+  - Реализация загрузки вложений в модуле webapp
+  - Реализация вложений в почте
+- JAX-WS Message Context. Авторизация
 - JAX-WS Handlers (логирование SOAP)
+- Домашнее задание. Статистика
 
 ## Занятие 10
-- Разбор ДЗ (реализация авторизации и статистики)
-- Авторизация в контейнере Tomcat
+- Разбор ДЗ
+  - Реализация SOAP handlers
+  - Конфигурирование сервисов
 - JavaEE
 - JAX-RS. Интеграция с Jersey
 - JMS. Интеграция с [ActiveMQ](http://activemq.apache.org/)
  
 ## Занятие 11
+- Авторизация в контейнере Tomcat
 - Отправка почты с вложениями
   - по JAX-RS
   - по JMS
-  - через AKKA (предварительно)
-  - через Redis (предварительно)
+  -Рефакторинг. Эксепшены в Java 8 лямбда
+- Concurrent and distributed applications toolkit AKKA
+- Отсылка почты через AKKA Actors (Typed и Untyped Actors)
+- Асинхронные сервлеты 3.0
+- Домашнее задание
+  - Разбор решения с асинхронными сервлетами
+- [Выбор языка программирования](https://drive.google.com/open?id=0B9Ye2auQ_NsFZUVNakNxeUtGeFE)
